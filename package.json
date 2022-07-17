@@ -1,0 +1,63 @@
+{
+  "name": "sails-react-chakra",
+  "version": "0.0.0",
+  "private": true,
+  "description": "a Sails, React Chakra application",
+  "keywords": [],
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.4",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@inertiajs/inertia": "^0.11.0",
+    "@inertiajs/inertia-react": "^0.8.0",
+    "@inertiajs/progress": "^0.2.7",
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "browser-sync": "^2.27.10",
+    "dotenv": "^16.0.1",
+    "framer-motion": "^6.5.1",
+    "inertia-sails": "^0.0.9",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sails": "^1.5.2",
+    "sails-hook-orm": "^4.0.0",
+    "sails-hook-sockets": "^2.0.0",
+    "sails-mysql": "^2.0.0",
+    "webpack": "^5.72.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "@babel/preset-react": "^7.17.12",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.13",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "sails.io.js": "^1.2.1",
+    "socket.io-client": "^2.2.0",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.0.24",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon app.js",
+    "start": "NODE_ENV=production node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": "^16.3.0"
+  }
+}
