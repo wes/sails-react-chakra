@@ -31,10 +31,10 @@ module.exports.webpack = {
   target: 'web',
 
   resolve: {
-    // alias: {
-    //   '~': path.resolve(__dirname, '..', 'assets'),
-    //   '@': path.resolve(__dirname, '..', 'frontend', 'js'),
-    // },
+    alias: {
+      '~': path.resolve(__dirname, '..', 'assets'),
+      '@': path.resolve(__dirname, '..', 'frontend', 'js'),
+    },
   },
 
   /***************************************************************************
@@ -93,17 +93,13 @@ module.exports.webpack = {
     // This plugin copies the `images` and `fonts` folders into
     // the .tmp/public folder.  You can add any other static asset
     // folders to this list and they'll be copied as well.
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    // {
-    //   from: './assets/images',
-    //   to: path.resolve(__dirname, '..', '.tmp', 'public', 'images'),
-    // },
-    // {
-    //   from: './assets/fonts',
-    //   to: path.resolve(__dirname, '..', '.tmp', 'public', 'fonts'),
-    // },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './assets/images',
+          to: path.resolve(__dirname, '..', '.tmp', 'public', 'images'),
+        },
+      ],
+    }),
   ],
 }

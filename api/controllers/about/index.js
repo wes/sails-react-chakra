@@ -6,7 +6,7 @@ module.exports = {
   fn: async function () {
     return sails.inertia.render('about', {
       title: 'about',
-      message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...',
+      message: 'Lorems ipsum dolor sit amet, consectetur adipisicing elit...',
     })
   },
 }
