@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client'
 import { createInertiaApp } from '@inertiajs/inertia-react'
 import { InertiaProgress } from '@inertiajs/progress'
 
+import ErrorBoundary from './components/ErrorBoundary'
+
 import theme from './theme'
 
 InertiaProgress.init()
@@ -14,7 +16,9 @@ createInertiaApp({
     const root = createRoot(el)
     root.render(
       <ChakraProvider theme={theme}>
-        <App {...props} />
+        <ErrorBoundary>
+          <App {...props} />
+        </ErrorBoundary>
       </ChakraProvider>
     )
   },
